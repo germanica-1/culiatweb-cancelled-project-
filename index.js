@@ -43,6 +43,7 @@ app.get("/admin/admin", (req, res) => {
 app.post("/api/admin/login", (req, res) => {
   const { username, password } = req.body;
 
+  //login
   // Access firebase to login
   const auth = getAuth();
   signInWithEmailAndPassword(auth, username, password)
