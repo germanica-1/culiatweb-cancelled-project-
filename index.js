@@ -35,6 +35,11 @@ app.get("/admin/login", (req, res) => {
   res.sendFile(__dirname + "/admin/login.html");
 });
 
+app.get("/admin/admin", (req, res) => {
+    res.sendFile(__dirname + "/admin/admin.html");
+  });
+
+
 app.post("/api/admin/login", (req, res) => {
   const { username, password } = req.body;
 
@@ -43,19 +48,34 @@ app.post("/api/admin/login", (req, res) => {
   signInWithEmailAndPassword(auth, username, password)
     .then((userCredential) => {
       // Signed in successfully
-      res.redirect("/");
+      res.redirect("/admin/admin");
     })
     .catch((error) => {
       res.redirect("/admin/login");
     });
 });
 
+// logout
 app.get("/api/admin/logout", (req, res) => {
     const auth = getAuth();
     signOut(auth).then(() => {
-        res.redirect("/");
+        res.redirect("/admin/login");
     });
 })
+
+app.get("/api/admin/logout", (req, res) => {
+  const auth = getAuth(); // Initialize Firebase Auth
+  signOut(auth)
+    .then(() => {
+      console.log("User logged out successfully"); // Debug log
+      res.redirect("/admin/login"); // Redirect to login page
+    })
+    .catch((error) => {
+      console.error("Error during logout:", error); // Debug error log
+      res.status(500).send("Logout failed");
+    });
+});
+
 
 app.get("/admin", (req, res) => {
   const auth = getAuth();
