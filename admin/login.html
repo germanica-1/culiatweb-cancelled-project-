@@ -1,55 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barangay Culiat | Admin</title>
-    <link rel="stylesheet" href="/css/login.css">
-</head>
-<body class="bg" style="background-image: url(/images/bg.png);">
+    <link rel="icon" type="img/jpg" href="/images/file.png" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <script type="module" src="/login.js" defer></script>
+  </head>
+  <body class="bg" style="background-image: url(/images/bg.png)">
     <div class="login-container">
-        <img src="/images/file.png"> 
-        <h2>ADMIN LOGIN</h2>
-        <form id="loginForm">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username">
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password">
-            </div>
-            <button type="submit" class="login-button">Login</button>
-        </form>
+      <img src="/images/file.png" />
+      <h2>ADMIN LOGIN</h2>
+      <form action="/api/admin/login" id="loginForm" method="post">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="email" id="username" name="username" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit" class="login-button">Login</button>
+      </form>
     </div>
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // Log the username and password
-            console.log("Username:", username);
-            console.log("Password:", password);
-
-            // Example of sending the data to an API server
-            // fetch('https://example.com/api/login', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify({ username, password }),
-            // })
-            // .then(response => response.json())
-            // .then(data => {
-            //     console.log('Success:', data);
-            //     // Redirect or handle success as needed
-            // })
-            // .catch((error) => {
-            //     console.error('Error:', error);
-            // });
-        });
-    </script>
-</body>
+  </body>
 </html>
