@@ -1,0 +1,86 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-image: url(public/images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensures background always covers the visible area */
+    background-position: center; /* Centers the background image */
+    overflow-y: auto; /* Allows vertical scrolling */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+    text-align: center;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.login-container img {
+    height: 10em;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #307d33;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+@media (max-height: 500px) {
+    .login-container {
+        padding: 30px;
+    }
+
+    .login-button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
