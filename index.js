@@ -35,11 +35,6 @@ app.get("/admin/login", (req, res) => {
   res.sendFile(__dirname + "/admin/login.html");
 });
 
-app.get("/admin/admin", (req, res) => {
-    res.sendFile(__dirname + "/admin/admin.html");
-  });
-
-
 app.post("/api/admin/login", (req, res) => {
   const { username, password } = req.body;
 
@@ -49,7 +44,7 @@ app.post("/api/admin/login", (req, res) => {
   signInWithEmailAndPassword(auth, username, password)
     .then((userCredential) => {
       // Signed in successfully
-      res.redirect("/admin/admin");
+      res.redirect("/admin");
     })
     .catch((error) => {
       res.redirect("/admin/login");
@@ -57,39 +52,28 @@ app.post("/api/admin/login", (req, res) => {
 });
 
 // logout
-app.get("/api/admin/logout", (req, res) => {
+app.get("/api/admin/logout", async (req, res) => {
     const auth = getAuth();
-    signOut(auth).then(() => {
-        res.redirect("/admin/login");
-    });
+    try {
+      await signOut(auth);
+      res.sendStatus(200);
+    } catch (err) {
+      res.sendStatus(500);
+    } 
 })
 
-app.get("/api/admin/logout", (req, res) => {
-  const auth = getAuth(); // Initialize Firebase Auth
-  signOut(auth)
-    .then(() => {
-      console.log("User logged out successfully"); // Debug log
-      res.redirect("/admin/login"); // Redirect to login page
-    })
-    .catch((error) => {
-      console.error("Error during logout:", error); // Debug error log
-      res.status(500).send("Logout failed");
-    });
-});
 
-
-app.get("/admin", (req, res) => {
+app.get("/admin", async (req, res) => {
   const auth = getAuth();
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/auth.user
-      const uid = user.uid;
-      res.sendFile(__dirname + "/admin/admin.html");
-      // ...
+      if (!res.headersSent) {
+        res.sendFile(__dirname + "/admin/admin.html");
+      }
     } else {
-      // User is signed out
-      res.redirect("/");
+      if (!res.headersSent) {
+        res.redirect("/");
+      }
     }
   });
 });

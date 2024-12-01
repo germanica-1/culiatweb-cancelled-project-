@@ -3,24 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barangay Culiat | Official Website</title>
+    <title>Barangay Culiat | Admin</title>
     <link rel="icon" type="img/jpg" href="/images/file.png" />
     <link rel="stylesheet" href="/css/admin.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-
     <div class="container">
       <nav>
         <ul>
           <li class="logo">
-              <img type="img/png" src="/images/file.png" alt="logo" />
-              <span class="nav-item">ADMIN</span>
+            <img type="img/png" src="/images/file.png" alt="logo" />
+            <span class="nav-item">ADMIN</span>
           </li>
           <li>
-            <a href="#">
+            <a href="admin.html">
               <i class="fas fa-home"></i>
               <span class="nav-item">Home</span>
             </a>
@@ -32,16 +37,18 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="news.html">
               <i class="fas fa-tasks"></i>
               <span class="nav-item">News</span>
             </a>
           </li>
           <li>
-            <a href="" class="logout">
+              <a class="logout"> 
               <i class="fas fa-sign-out-alt"></i>
-              <button type="submit" class="nav-item" id="logout">Log out</button>
-            </a>
+              <button type="button" class="button-item" id="logout">
+                Log out
+              </button>
+              </a>
           </li>
         </ul>
       </nav>
@@ -117,26 +124,16 @@
         </section>
       </section>
     </div>
-    
+
     <script>
       // Attach a click event listener to the logout button
-      document.getElementById("logout").addEventListener("click", () => {
+      document.getElementById("logout").addEventListener("click", async () => {
         // Send a request to the server to log out
-        fetch("/api/admin/logout")
-          .then((response) => {
-            if (response.redirected) {
-              window.location.href = response.url; // Redirect to login page
-            } else {
-              console.error("Logout failed");
-            }
-          })
-          .catch((error) => console.error("Error:", error));
+        const response = await fetch("/api/admin/logout");
+        if (response.ok) {
+          window.location.href = "/admin/login"
+        }
       });
     </script>
-
-
-
-
   </body>
 </html>
-

@@ -52,27 +52,46 @@ a{
 }
 nav .fas{
   position: relative;
-  width: 70px;
+  width: 80px;
   height: 40px;
   top: 14px;
   font-size: 20px;
   text-align: center;
+  
 }
 .nav-item{
   position: relative;
   top: 12px;
-  margin-left: 10px;
+  margin-left: 7px;
   text-decoration: none;
   font-size: 20px;
+}
+
+.button-item {
+  position: relative;
+  top: 15px;
+  margin-left: 7px;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.logout{
+  position: absolute;
+  bottom: 0px;
+}
+
+
+a:hover,
+.button-item:hover {
+  background: #eee;
 }
 
 .container li {
   margin-top: 30px;
 }
 
-a:hover{
-  background: #eee;
-}
 
 .logo img {
   height: 70px;
@@ -84,11 +103,6 @@ a:hover{
   font-size: 30px;
   margin-top: 5px;
   margin-left:-5px;
-}
-
-.logout{
-  position: absolute;
-  bottom: 0;
 }
 
 /* Main Section */
