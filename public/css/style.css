@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-
+body {
+    height: auto;
+}
 
 header {
     top: 0;
@@ -144,61 +146,6 @@ nav ul li a:hover {
 @keyframes fade {
     from { opacity: 0.4; }
     to { opacity: 1; }
-}
-
-/* Responsive styling for banner*/
-@media (max-width: 425px) {
-    .banner {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-    }
-
-    .banner-text {
-        padding: 0;
-    }
-
-    .banner-text h1 {
-        font-size: 2rem;
-    }
-
-    .banner-text p {
-        font-size: 1rem;
-    }
-
-    .slideshow-container {
-        max-width: auto;
-        height: auto;
-    }
-
-}
-
-/* Responsive styling for banner*/
-@media (max-width: 425px) {
-    .banner {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-    }
-
-    .banner-text {
-        padding: 0;
-    }
-
-    .banner-text h1 {
-        font-size: 2rem;
-    }
-
-    .banner-text p {
-        font-size: 1rem;
-    }
-
-    .slideshow-container {
-        max-width: auto;
-        height: auto;
-    }
-
-
 }
 
 /*news section */
@@ -383,11 +330,13 @@ nav ul li a:hover {
 footer {
     background-color: #2E7D32;
     color: white;
-    position: relative;
     bottom: 0;
     width: 100%;
+    position: sticky;
+    height: 100px;
+    top: calc( 100vh - 100px );
     text-align: center;
-
+    height: 90%;
 }
 
 .footer-container {
@@ -531,6 +480,14 @@ footer {
         display: none;
         margin: none;
     }
+
+    .banner-text h1 {
+        text-align: center;
+    }
+
+    .banner-text p {
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -552,8 +509,8 @@ footer {
 @media (max-width: 425px) {
     .banner-text {
         margin: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 150px;
+        margin-bottom: 150px;
         padding: auto;
     }
 
@@ -676,11 +633,11 @@ footer {
     }
 
     .title {
-        font-size: 1.0rem;
+        font-size: 1.6rem;
     }
     
     .subtitle {
-        font-size: 0.2rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -689,6 +646,7 @@ footer {
     .footer-container {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
     }
 
     .footer-contents ul li a {
@@ -704,8 +662,8 @@ footer {
 
     .upper-footer-contents img {
         height: 75px;
-        margin-right: 10px;
-        margin-left: 15px;
+        margin-right: 5px;
+        margin-left: 20px;
     }
     
     .upper-footer-contents h1 {
@@ -713,17 +671,18 @@ footer {
     }
 
     .footer-bottom-contents p {
-        font-size: 13px
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 1212px) {
+    .footer-bottom-contents p {
+        font-size: 20px;
     }
 }
 
 /*Weird fix for Big Screen*/
 @media (min-height: 1774px) {
-    footer {
-        margin-top: 0;
-        bottom: -38vh;
-    }
-
     .logo img {
         height: 110px;
     }
