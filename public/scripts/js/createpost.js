@@ -1,9 +1,4 @@
-document.getElementById("create-post").addEventListener("click", function () {
-  const postFormContainer = document.getElementById("post-form-container");
-  postFormContainer.style.display = postFormContainer.style.display === "none" ? "block" : "none";
-});
-
-document.getElementById("post-form").addEventListener("submit", function (e) {
+document.getElementById("post-form").addEventListener("submit", async function (e) {
   e.preventDefault();
 
   const headline = document.getElementById("headline").value;
@@ -12,15 +7,30 @@ document.getElementById("post-form").addEventListener("submit", function (e) {
   const photo = document.getElementById("photo").files[0];
 
   if (headline && date && content && photo) {
-      alert("News post submitted successfully!");
-      
-      // Hide the post form container after submission
-      const postFormContainer = document.getElementById("post-form-container");
-      postFormContainer.style.display = "none";
+    const formData = new FormData();
+    formData.append("headline", headline);
+    formData.append("date", date);
+    formData.append("content", content);
+    formData.append("photo", photo);
 
-      // Optional: Reset form fields after hiding
-      document.getElementById("post-form").reset();
+    try {
+      const response = await fetch('/api/news', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert("News post submitted successfully!");
+        document.getElementById("post-form").reset();
+        document.getElementById("post-form-container").style.display = "none";
+      } else {
+        alert("Failed to submit news post.");
+      }
+    } catch (error) {
+      console.error("Error submitting news post:", error);
+      alert("An error occurred while submitting the news post.");
+    }
   } else {
-      alert("Please fill out all fields.");
+    alert("Please fill out all fields.");
   }
 });

@@ -53,46 +53,72 @@
       <div class="news-dashboard">
         <h1 class="head-news">NEWS DASHBOARD</h1>
         <div>
-          <button type="button" id="create-post" class="button-news">Create Post</button>
+          <button type="button" id="create-post" class="button-news">
+            Create Post
+          </button>
         </div>
       </div>
     </div>
 
-        <!-- Post Form Container -->
-        <div id="post-form-container" style="display: none;">
-          <form id="post-form">
-            
-            <div>
-              <label for="headline">Headline:</label>
-              <textarea id="headline" name="headline" placeholder="Enter headline" required></textarea>
-            </div>
-
-            <div>
-              <label for="photo">Upload Photo:</label>
-              <input type="file" id="photo" name="photo" accept="image/*" required />
-            </div>
-
-            <div>
-              <label for="date">Date:</label>
-              <input type="date" id="date" name="date" required />
-            </div>
-            
-            <div>
-              <label for="news-content">News Content:</label>
-              <textarea id="news-content" name="news-content" placeholder="Enter news content" required></textarea>
-            </div>
-
-            <div>
-              <button type="submit" class="button-news" id="post-button">Post News</button>
-            </div>
-          </form>
+    <!-- Post Form Container -->
+    <div id="post-form-container" style="display: none">
+      <form id="post-form">
+        <div>
+          <label for="headline">Headline:</label>
+          <textarea
+            id="headline"
+            name="headline"
+            placeholder="Enter headline"
+            required
+          ></textarea>
         </div>
-      </div>
-    
+        <div>
+          <label for="photo">Upload Photo:</label>
+          <input
+            type="file"
+            id="photo"
+            name="photo"
+            accept="image/*"
+            required
+          />
+        </div>
+        <div>
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+        <div>
+          <label for="news-content">News Content:</label>
+          <textarea
+            id="news-content"
+            name="news-content"
+            placeholder="Enter news content"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <button type="submit" class="button-news" id="post-button">
+            Post News
+          </button>
+        </div>
+      </form>
+    </div>
 
     <script src="/scripts/js/logout.js"></script>
     <script src="/scripts/js/active.js"></script>
-    <script src="/scripts/js/createpost.js"></script>
-    
+    <script src="/scripts/js/sendnews.js"></script>
+
+    <script>
+      // Toggle form visibility
+      const form = document.getElementById("post-form");
+      const createPostButton = document.getElementById("create-post");
+      const postFormContainer = document.getElementById("post-form-container");
+
+      createPostButton.addEventListener("click", () => {
+        postFormContainer.style.display = "block";
+      });
+    </script>
+
+
+
   </body>
 </html>
