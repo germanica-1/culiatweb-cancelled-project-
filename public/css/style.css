@@ -526,10 +526,43 @@ footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+@media (max-width: 1440px) {
+    .slideshow-container {
+        display: none;
+        margin: none;
+    }
+}
 
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-text h1 {
+        font-size: 100px;
+        text-align: center;
+    }
+
+    .banner-text p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .banner-text {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: auto;
+    }
+
+    .banner-text h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .banner-text p {
         text-align: center;
     }
 }
@@ -549,6 +582,7 @@ footer {
     section, nav, footer {
         overflow: hidden;
     }
+
     .off-screen-menu {
         background-color: white;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -560,7 +594,7 @@ footer {
         right: -480px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: top;
         align-items: center;
         font-size: 5rem;
         transition: .3s ease;
@@ -575,14 +609,16 @@ footer {
         list-style: none;
         color: #2E7D32;
         text-decoration: none;  
+        margin-top: 10vh;
     }
 
     .off-screen-menu ul a {
         color: #2E7D32;
         text-decoration: none;
         font-size: 25px;
-        line-height: 15vh;
+        line-height: 5vh;
         margin-right: auto;
+        margin-top: 4vh;
     }
 
     .off-screen-menu ul a:hover {
@@ -686,6 +722,22 @@ footer {
     footer {
         margin-top: 0;
         bottom: -38vh;
+    }
+
+    .logo img {
+        height: 110px;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.4rem;
+    }
+
+    nav ul li a {
+        font-size: 40px;
     }
 }
 

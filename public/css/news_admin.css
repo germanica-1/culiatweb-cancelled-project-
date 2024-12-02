@@ -134,7 +134,7 @@ a.active {
   position: absolute;
   top: 10em;
   left: 17.5em;
-  width: 98em;
+  width: 100%;
 }
 
 #post-form div {
@@ -161,7 +161,9 @@ a.active {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  
 }
+
 
 .button-news:hover {
   background-color: #0056b3;

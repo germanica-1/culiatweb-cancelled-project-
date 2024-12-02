@@ -105,6 +105,11 @@ a:hover,
   margin-left:-5px;
 }
 
+a.active {
+  background: #eee; /* Background color for the active link */
+  color: rgb(0, 0, 0); /* Text color */
+}
+
 /* Main Section */
 .main{
   position: relative;
@@ -225,3 +230,4 @@ a:hover,
 .js{
   color: rgb(28, 98, 179);
 }
+
