@@ -26,6 +26,7 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 // Default route
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
@@ -35,10 +36,23 @@ app.get("/admin/login", (req, res) => {
   res.sendFile(__dirname + "/admin/login.html");
 });
 
+app.get("/admin/news", (req, res) => {
+  res.sendFile(__dirname + "/admin/news_admin.html");
+});
+
+app.get("/admin/admin", (req, res) => {
+  res.sendFile(__dirname + "/admin/admin.html");
+});
+
+app.get("/admin/Inquiries", (req, res) => {
+  res.sendFile(__dirname + "/admin/Inquiries_admin.html");
+});
+
+
+  //login
 app.post("/api/admin/login", (req, res) => {
   const { username, password } = req.body;
 
-  //login
   // Access firebase to login
   const auth = getAuth();
   signInWithEmailAndPassword(auth, username, password)

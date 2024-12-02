@@ -25,30 +25,30 @@
             <span class="nav-item">ADMIN</span>
           </li>
           <li>
-            <a href="admin.html">
+            <a href="/admin/admin">
               <i class="fas fa-home"></i>
               <span class="nav-item">Home</span>
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="/admin/Inquiries">
               <i class="fas fa-user"></i>
               <span class="nav-item">Inquiries</span>
             </a>
           </li>
           <li>
-            <a href="news_admin.html">
+            <a href="/admin/news">
               <i class="fas fa-tasks"></i>
               <span class="nav-item">News</span>
             </a>
           </li>
           <li>
-              <a class="logout"> 
+            <a class="logout">
               <i class="fas fa-sign-out-alt"></i>
               <button type="button" class="button-item" id="logout">
                 Log out
               </button>
-              </a>
+            </a>
           </li>
         </ul>
       </nav>
@@ -125,15 +125,7 @@
       </section>
     </div>
 
-    <script>
-      // Attach a click event listener to the logout button
-      document.getElementById("logout").addEventListener("click", async () => {
-        // Send a request to the server to log out
-        const response = await fetch("/api/admin/logout");
-        if (response.ok) {
-          window.location.href = "/admin/login"
-        }
-      });
-    </script>
+    <script src="/scripts/js/logout.js"></script>
+    <script src="/scripts/js/active.js"></script>
   </body>
 </html>

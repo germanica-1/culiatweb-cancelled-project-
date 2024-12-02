@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <link rel="icon" type="img/jpg" href="/images/file.png" />
-    <link rel="stylesheet" href="/admin/news_admin.css" />
+    <link rel="stylesheet" href="/css/news_admin.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -18,31 +18,31 @@
       <nav>
         <ul>
           <li class="logo">
-            <img type="img/png" src="/public/images/file.png" alt="logo" />
+            <img type="img/png" src="/images/file.png" alt="logo" />
             <span class="nav-item">ADMIN</span>
           </li>
           <li>
-            <a href="admin.html">
+            <a href="/admin/admin">
               <i class="fas fa-home"></i>
               <span class="nav-item">Home</span>
             </a>
           </li>
           <li>
-            <a href="Inquiries_admin.html">
+            <a href="/admin/Inquiries">
               <i class="fas fa-user"></i>
               <span class="nav-item">Inquiries</span>
             </a>
           </li>
           <li>
-            <a href="news_admin.html">
+            <a href="/admin/news">
               <i class="fas fa-tasks"></i>
               <span class="nav-item">News</span>
             </a>
           </li>
           <li>
-            <a href="" class="logout">
+            <a class="logout">
               <i class="fas fa-sign-out-alt"></i>
-              <button type="submit" class="nav-item" id="logout">
+              <button type="button" class="button-item" id="logout">
                 Log out
               </button>
             </a>
@@ -57,5 +57,9 @@
         </div>
       </div>
     </div>
+
+    <script src="/scripts/js/logout.js"></script>
+    <script src="/scripts/js/active.js"></script>
+    
   </body>
 </html>
