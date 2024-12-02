@@ -242,3 +242,158 @@ footer {
         text-align: center;
     }
 }
+
+/*Under is all the CSS for Hamburger*/
+.ham-menu {
+    display: none;
+    margin: none;
+}
+
+.off-screen-menu {
+    display: none;
+    margin: none;
+}
+
+@media (max-width: 1024px) {
+    section, nav, footer {
+        overflow: hidden;
+    }
+    .off-screen-menu {
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 100vh;
+        width: 100%;
+        max-width: 200px;
+        position: fixed;
+        top: 0;
+        right: -480px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        transition: .3s ease;
+        z-index: 1;
+    }
+
+    .off-screen-menu.active {
+        right: 0;
+    }
+
+    .off-screen-menu ul {
+        list-style: none;
+        color: #2E7D32;
+        text-decoration: none;  
+    }
+
+    .off-screen-menu ul a {
+        color: #2E7D32;
+        text-decoration: none;
+        font-size: 25px;
+        line-height: 15vh;
+        margin-right: auto;
+    }
+
+    .off-screen-menu ul a:hover {
+        text-decoration: underline;
+    }
+
+    .ham-menu {
+        height: 50px;
+        width: 50px;
+        margin-left: auto;
+        position: relative;
+        z-index: 2;
+        margin-right: 2px;
+        display: flex;
+    }
+
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba (0, 0, 0, 0.1);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+
+    .ham-menu.active span {
+        background-color: #2E7D32;
+    }
+
+    .ham-menu span:nth-child(1) {
+        top: 25%;
+    }
+
+    .ham-menu span:nth-child(3) {
+        top: 75%
+    }
+
+    nav ul li a,
+    nav ul li,
+    nav ul,
+    nav {
+        display: none;
+        margin: none;
+    }
+
+    .logo,
+    .logo img {
+        height: 60px;
+        margin-right: 5px;
+        margin-left: 2px;
+    }
+
+    .title {
+        font-size: 1.0rem;
+    }
+    
+    .subtitle {
+        font-size: 0.2rem;
+    }
+}
+
+/*Adaptive Footers*/
+@media (max-width: 425px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-contents ul li a {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .footer-middle-contents ul li:not(:last-child)::after,
+    .footer-middle-contents ul li a {
+        display: none;
+        margin: none;
+    }
+
+    .upper-footer-contents img {
+        height: 75px;
+        margin-right: 10px;
+        margin-left: 15px;
+    }
+    
+    .upper-footer-contents h1 {
+        font-size: 37px;
+    }
+
+    .footer-bottom-contents p {
+        font-size: 13px
+    }
+}
+
+/*Weird fix for Big Screen*/
+@media (min-height: 1774px) {
+    footer {
+        margin-top: 0;
+        bottom: -38vh;
+    }
+}
