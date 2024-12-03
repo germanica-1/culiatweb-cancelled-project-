@@ -142,7 +142,7 @@ a.active {
   position: absolute;
   top: 5em;
   left: 17.5em;
-  width: 100%;
+  width: 80%;
 }
 
 #post-form-container label {
@@ -199,10 +199,8 @@ a.active {
 .posted-news {
   margin: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
-  background: #f9f9f9;
   position: absolute;
-  top: 55em;
+  top: 52em;
   left: -15px;
 }
 
@@ -213,14 +211,14 @@ a.active {
   width: 80%;
   border: 1px solid #ccc;
   background: #f9f9f9;
+  border-radius: 10px;
   position: absolute;
-  top: 62em;
+  top: 58em;
   left: -15px;
 }
 
 table {
-  width: 98%;
-  
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -229,7 +227,7 @@ table, th, td {
 }
 
 th {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 th, td {
