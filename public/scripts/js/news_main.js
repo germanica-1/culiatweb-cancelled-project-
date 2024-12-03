@@ -22,6 +22,7 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 // Fetch news data from Firebase
+// Fetch news data from Firebase
 function loadNews() {
   const newsRef = ref(database, "NEWS");
   get(newsRef)
@@ -37,11 +38,15 @@ function loadNews() {
         let newsHTML = "";
         newsArray.forEach((news) => {
           newsHTML += `
-            <div class="news-item">
-                <h3>${news.headline}</h3>
-                <p><strong>Date:</strong> ${news.date}</p>
-                <p>${news.content}</p>
-                <img src="${news.photo}" alt="News Image" />
+            <div class="news-container-item">
+                <div class="news-image">
+                    <img src="${news.photo}" alt="${news.headline}" />
+                </div>
+                <div class="news-content">
+                    <h3 class="news-headline">${news.headline}</h3>
+                    <p class="news-date"><strong>Date:</strong> ${news.date}</p>
+                    <p class="news-text">${news.content}</p>
+                </div>
             </div>
           `;
         });

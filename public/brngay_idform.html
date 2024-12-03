@@ -6,6 +6,7 @@
     <title>Barangay ID form</title>
     <link rel="stylesheet" href="css/brngy-id.css">
     <link rel="icon" type="img/jpg" href="images/file.png">  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     
@@ -28,8 +29,8 @@
             </ul>
         </nav>
 
-          <!--below are all the HTML for Hamburger-->
-          <div class="off-screen-menu">
+        <!--below are all the HTML for Hamburger-->
+        <div class="off-screen-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -48,24 +49,70 @@
             <script src="scripts/js/hamburger.js"></script>
         <!--Stops here-->
     </header>
-
-    <div class="brngy_id_container">
-        <h1 id="brngy_id_header">BARANGAY ID FORM</h1>
+    <h1 id="brngy_id_header">BARANGAY ID FORM</h1>
+    <div class="brngy_id_container"> 
         <div class="form_container">
-            <form>
-
-
-
-
-
-
-           
-             </form>
+            <form class="form_inputs">
+                <h2 class="text">Full Name</h2>
+                <input class="input" type="text" name="fullName" placeholder="Full Name">
+                <h2 class="text">Phone Number</h2>
+                <input class="input" type="tel" pattern="[0-9]{4} [0-9]{3} [0-9]{4}" placeholder="0912 345 6789" required>
+                <h2 class="text">Address</h2>
+                <input class="input" type="address" placeholder="467 Tandang Sora Ave, Quezon City, 1128 Metro Manila" required>
+                <h2 class="text">Date of Submission</h2>
+                <input class="input" type="date" placeholder="09/09/2001" required>
+                <div class="submit_btn">
+                <button class="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="line_space"></div>
+        <div class="line"></div>
+        <div class="line_space2"></div>
+        <div class="requirements">
+            <h2>REQUIREMENTS</h2>
+            <ul>
+                <li>Birth Certificate</li>
+                <li>1 Valid I.D.</li>
+            </ul>
         </div>
     </div>
+    <footer>
+        <div class="footer-container">
+            <div class="upper-footer-container">
+                <div class="upper-footer-contents">
+                    <a href="index.html"> <img src="images/file.png" alt="Barangay Culiat Logo"> </a>
+                    <h1>Barangay Culiat</h1>
+                </div>
+            </div>
 
+            <div class="footer-contents"> 
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=100082364929259 t" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+            </div>
 
+            <div class="footer-middle-contents">
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
 
-
+            <div class="footer-bottom-container"> 
+                <div class="footer-bottom-contents">
+                    <p>© 2024 - www.brngyculiat.com - All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/js/nav1.js"></script>
+    <script src="scripts/js/hamburger.js"></script>
 </body>
 </html>

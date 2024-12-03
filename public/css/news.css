@@ -433,3 +433,61 @@ footer {
         font-size: 40px;
     }
 }
+
+/* General Container for News */
+.news-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap onto the next line if needed */
+    gap: 20px; /* Space between the news items */
+    padding: 20px;
+    margin-top: 50px;
+    justify-content: center; /* Centers the news items in the container */
+}
+
+/* Each individual news item container */
+.news-item {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Limits the width of each news item */
+    width: 100%; /* Makes sure it fills the available space */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect on news item */
+.news-item:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+}
+
+/* Image styling */
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* News headline styling */
+.news-headline {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Date styling */
+.news-date {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Content styling */
+.news-content {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
