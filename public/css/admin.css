@@ -115,6 +115,17 @@ a:hover,
   display: flex;
   width: 100%;
 }
+
+.posted-dashboard{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+.posted-dashboard{
+  display: flex;
+  width: 100%;
+}
+
 .main-top i{
   position: absolute;
   right: 0;
@@ -158,70 +169,69 @@ a:hover,
   padding: 10px;
 }
 
-/* Courses */
-.main-course{
-  margin-top:20px ;
-  text-transform: capitalize;
-}
-.course-box{
+
+.posted-dashboard{
+  position: relative;
+  padding: 20px;
   width: 100%;
-  height: 300px;
-  padding: 10px 10px 30px 10px;
-  margin-top: 10px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
-.course-box ul{
-  list-style: none;
+.posted-dashboard{
   display: flex;
+  width: 100%;
 }
-.course-box ul li{
-  margin: 10px;
-  color: gray;
-  cursor: pointer;
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
-.course-box ul .active{
-  color: #000;
-  border-bottom: 1px solid #000;
+
+table, th, td {
+  border: 1px solid #ddd;
 }
-.course-box .course{
-  display: flex;
+
+th {
+  font-size: 15px;
 }
-.box{
-  width: 33%;
+
+th, td {
   padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  background: rgb(235, 233, 233);
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
-.box p{
-  font-size: 12px;
-  margin-top: 5px;
+
+td {
+  font-size: 15px;
 }
-.box button{
-  background: #000;
-  color: #fff;
-  padding: 7px 10px;
-  border-radius: 10px;
-  margin-top: 3rem;
+
+th {
+  background-color: #f4f4f4;
+}
+
+button.delete-btn {
+  background-color:#007bff;
+  color: white;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
   cursor: pointer;
+  border-radius: 5px;
 }
-.box button:hover{
-  background: rgba(0, 0, 0, 0.842);
+
+button.delete-btn:hover {
+  background-color: #0056b3;
 }
-.box i{
-  font-size: 7rem;
-  float: right;
-  margin: -20px 20px 20px 0;
+
+.posted-dashboard {
+  margin: 20px;
+  padding: 10px;
+  height: auto;
+  width: 90%;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 10px;
+  position: absolute;
 }
-.html{
-  color: rgb(25, 94, 54);
-}
-.css{
-  color: rgb(104, 179, 35);
-}
-.js{
-  color: rgb(28, 98, 179);
+
+#posted {
+  margin-top: 20px;
 }

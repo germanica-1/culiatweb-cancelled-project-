@@ -206,7 +206,7 @@ a.active {
 
 .posted-dashboard {
   margin: 20px;
-  padding: 20px;
+  padding: 15px;
   height: auto;
   width: 80%;
   border: 1px solid #ccc;
@@ -227,16 +227,16 @@ table, th, td {
 }
 
 th {
-  font-size: 25px;
+  font-size: 15px;
 }
 
 th, td {
-  padding: 20px;
+  padding: 15px;
   text-align: center;
 }
 
 td {
-  font-size: 25px;
+  font-size: 15px;
 }
 
 th {
@@ -247,7 +247,7 @@ button.delete-btn {
   background-color:#007bff;
   color: white;
   border: none;
-  font-size: 25px;
+  font-size: 15px;
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
