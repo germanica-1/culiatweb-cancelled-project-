@@ -39,68 +39,22 @@
             </ul>
         </div>
 
-            <div class="ham-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div> 
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> 
 
-            <script src="scripts/js/hamburger.js"></script>
-        <!--Stops here-->
+        <script src="scripts/js/hamburger.js"></script>
     </header>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
+    <div class="news-container" id="news-container">
+        <!-- News will be dynamically inserted here -->
+    </div>
 
 
     <footer>
         <div class="footer-container">
-
             <div class="upper-footer-container">
                 <div class="upper-footer-contents">
                     <a href="index.html"> <img src="images/file.png" alt="Barangay Culiat Logo"> </a>
@@ -108,10 +62,9 @@
                 </div>
             </div>
 
-
             <div class="footer-contents"> 
             <ul>
-                <li><a href="https://www.facebook.com/profile.php?id=100082364929259 t" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100082364929259" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a href="#" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                 <li><a href="#" target="_blank"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
                 <li><a href="#" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
@@ -120,7 +73,7 @@
 
             <div class="footer-middle-contents">
                 <ul>
-                 <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="#">News</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -135,12 +88,10 @@
             </div>
 
         </div>
-
     </footer>
 
-    
-
-
-    <script src="scripts/js/nav4.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"></script>
+    <script type="module" src="/scripts/js/news_main.js"></script>
 </body>
 </html>

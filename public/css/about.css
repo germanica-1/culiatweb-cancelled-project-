@@ -319,24 +319,21 @@ margin: auto;
     background-color: #2E7D32;
     font-size: 80px;
     padding: 20px;
-    
   }
 
   footer {
     background-color: #2E7D32;
     color: white;
-    position: relative;
-    bottom: 0;
     width: 100%;
     text-align: center;
-    
+    margin-top: auto;  /* Pushes the footer to the bottom */
 }
 
+/* Optional: Additional styling for responsiveness */
 .footer-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .footer-contents ul {
@@ -466,8 +463,6 @@ margin: auto;
     margin-bottom: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
 
 @media (max-width: 1440px) {
     .container {
@@ -604,11 +599,13 @@ margin: auto;
     }
 }
 
+/*copy start from here*/
 /*Adaptive Footers*/
 @media (max-width: 425px) {
     .footer-container {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
     }
 
     .footer-contents ul li a {
@@ -624,26 +621,34 @@ margin: auto;
 
     .upper-footer-contents img {
         height: 75px;
-        margin-right: 10px;
-        margin-left: 15px;
+        margin-right: 0px;
+        margin-left: 30px;
     }
     
     .upper-footer-contents h1 {
         font-size: 37px;
     }
 
+    .footer-bottom-contents > p {
+        font-size: 13px;
+    }
+}
+
+@media (min-height: 1212px) {
     .footer-bottom-contents p {
-        font-size: 13px
+        font-size: 20px;
+    }
+}
+/* copy up to here */
+
+@media (max-width: 320) {
+    .upper-footer-contents img {
+        margin-left: 0px;
     }
 }
 
 /*Weird fix for Big Screen*/
 @media (min-height: 1774px) {
-    footer {
-        margin-top: 0;
-        bottom: -38vh;
-    }
-
     .logo img {
         height: 110px;
     }

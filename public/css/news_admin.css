@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700");
-*{
+
+* {
   margin: 0;
   padding: 0;
   outline: none;
@@ -8,40 +9,49 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body{
+
+body {
   background: #dfe9f5;
-}
-.container{
   display: flex;
+  margin-left: 280px; /* Offset the body content to the right to prevent overlap with the sidebar */
 }
-nav{
-  position: relative;
+
+.container {
+  display: flex;
+  flex-grow: 1;
+}
+
+nav {
+  position: fixed; /* Make the sidebar fixed on the left side */
   top: 0;
-  bottom: 0;
-  height: 100vh;
   left: 0;
-  background: #fff;
+  height: 100vh; /* Full height */
   width: 280px;
-  overflow: hidden;
+  background: #fff;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure sidebar is above other content */
 }
-.logo{
+
+.logo {
   text-align: center;
   display: flex;
   margin: 10px 0 0 10px;
 }
-.logo img{
+
+.logo img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
 }
-.logo span{
+
+.logo span {
   font-weight: bold;
   padding-left: 15px;
   font-size: 18px;
   text-transform: uppercase;
 }
-a{
+
+a {
   position: relative;
   color: rgb(85, 83, 83);
   font-size: 14px;
@@ -49,16 +59,17 @@ a{
   width: 280px;
   padding: 10px;
 }
-nav .fas{
+
+nav .fas {
   position: relative;
   width: 80px;
   height: 40px;
   top: 14px;
   font-size: 20px;
   text-align: center;
-  
 }
-.nav-item{
+
+.nav-item {
   position: relative;
   top: 12px;
   margin-left: 7px;
@@ -76,11 +87,10 @@ nav .fas{
   background-color: #fff;
 }
 
-.logout{
+.logout {
   position: absolute;
   bottom: 0px;
 }
-
 
 a:hover,
 .button-item:hover {
@@ -91,7 +101,6 @@ a:hover,
   margin-top: 30px;
 }
 
-
 .logo img {
   height: 70px;
   width: 70px;
@@ -101,14 +110,13 @@ a:hover,
 .logo span {
   font-size: 30px;
   margin-top: 5px;
-  margin-left:-5px;
+  margin-left: -5px;
 }
 
 a.active {
-  background: #eee; /* Background color for the active link */
-  color: rgb(0, 0, 0); /* Text color */
+  background: #eee;
+  color: rgb(0, 0, 0);
 }
-
 
 /* News panel */
 .head-news {
@@ -132,9 +140,13 @@ a.active {
   border: 1px solid #ccc;
   background: #f9f9f9;
   position: absolute;
-  top: 10em;
+  top: 5em;
   left: 17.5em;
-  width: 100%;
+  width: 80%;
+}
+
+#post-form-container label {
+  font-size: 35px;
 }
 
 #post-form div {
@@ -146,12 +158,20 @@ a.active {
   margin-bottom: 5px;
 }
 
-#post-form textarea, 
+#post-form textarea,
 #post-form input {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+#post-form input {
+  font-size: 25px;
+}
+
+#post-form textarea {
+  font-size: 25px;
 }
 
 .button-news {
@@ -161,10 +181,78 @@ a.active {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  
+}
+
+.button-news:hover {
+  background-color: #0056b3;
 }
 
 
-.button-news:hover {
+.posted-news {
+  margin-top: 60px;
+}
+
+.posted-head {
+  margin-left: 60px;
+}
+
+.posted-news {
+  margin: 20px;
+  padding: 20px;
+  position: absolute;
+  top: 52em;
+  left: -15px;
+}
+
+.posted-dashboard {
+  margin: 20px;
+  padding: 15px;
+  height: auto;
+  width: 80%;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 10px;
+  position: absolute;
+  top: 58em;
+  left: -15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th {
+  font-size: 15px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+}
+
+td {
+  font-size: 15px;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+button.delete-btn {
+  background-color:#007bff;
+  color: white;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.delete-btn:hover {
   background-color: #0056b3;
 }

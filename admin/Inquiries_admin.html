@@ -9,6 +9,7 @@
 
   <body>
     <div class="container">
+      <!-- Side Navigation Panel -->
       <nav>
         <ul>
           <li class="logo">
@@ -33,18 +34,48 @@
               <span class="nav-item">News</span>
             </a>
           </li>
-          <li>
-            <a class="logout">
+          <li class="logout">
+            <a>
               <i class="fas fa-sign-out-alt"></i>
-              <button type="button" class="button-item" id="logout">
-                Log out
-              </button>
+              <button type="button" class="button-item" id="logout">Log out</button>
             </a>
           </li>
         </ul>
       </nav>
-      
-      <script src="/scripts/js/logout.js"></script>
-      <script src="/scripts/js/active.js"></script>
-</body>
+
+      <!-- Main Content Section -->
+      <section class="main">
+        <div class="Inquiries_dash">
+          <h1 class="head-news">INQUIRIES DASHBOARD</h1>
+        </div>
+
+        <!-- User Requests Table -->
+        <div class="posted-news" id="posted-news">
+          <h1 id="posted">USER REQUEST</h1>
+        </div>
+        
+        <div class="posted-dashboard">
+          <table class="posted-table">
+            <thead>
+              <tr class="posted-head">
+                <th>#</th>
+                <th>Name</th>
+                <th>Phone number</th>
+                <th>Address</th>
+                <th>Service requested</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="table-post">
+              <!-- Table rows will be injected here by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/scripts/js/logout.js"></script>
+    <script src="/scripts/js/active.js"></script>
+  </body>
 </html>

@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" type="img/jpg" href="/images/file.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/file.png" type="image/png" />
     <link rel="stylesheet" href="/css/news_admin.css" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <title>Admin Dashboard</title>
   </head>
-
   <body>
     <div class="container">
       <nav>
         <ul>
           <li class="logo">
-            <img type="img/png" src="/images/file.png" alt="logo" />
+            <img src="/images/file.png" alt="logo" />
             <span class="nav-item">ADMIN</span>
           </li>
           <li>
@@ -52,16 +50,11 @@
 
       <div class="news-dashboard">
         <h1 class="head-news">NEWS DASHBOARD</h1>
-        <div>
-          <button type="button" id="create-post" class="button-news">
-            Create Post
-          </button>
-        </div>
       </div>
     </div>
 
     <!-- Post Form Container -->
-    <div id="post-form-container" style="display: none">
+    <div id="post-form-container">
       <form id="post-form">
         <div>
           <label for="headline">Headline:</label>
@@ -87,7 +80,7 @@
           <input type="date" id="date" name="date" required />
         </div>
         <div>
-          <label for="news-content">News Content:</label>
+          <label for="content">News Content:</label>
           <textarea
             id="content"
             name="news-content"
@@ -96,30 +89,44 @@
           ></textarea>
         </div>
         <div>
-          <button type="submit" class="button-news" id="post-button">
+          <button
+            type="submit"
+            class="button-news"
+            id="post-button"
+            value="submit"
+          >
             Post News
           </button>
         </div>
       </form>
+
+      <!-- Posted News Container -->
+      <div class="posted-news" id="posted-news">
+        <h1>Posted News</h1>
+      </div>
+      <div class="posted-dashboard">
+        <table class="posted-table">
+          <thead>
+            <tr class="posted-head">
+              <th>#</th>
+              <th>Headline</th>
+              <th>Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="post-table">
+ 
+          </tbody>
+        </table>
+
+      </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"></script>
 
     <script src="/scripts/js/logout.js"></script>
     <script src="/scripts/js/active.js"></script>
-    <script src="sendnews.js"></script>
-    <!--Firebase Libraries-->
-    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"></script>
-
-    <script>
-      // Toggle form visibility
-      const form = document.getElementById("post-form");
-      const createPostButton = document.getElementById("create-post");
-      const postFormContainer = document.getElementById("post-form-container");
-
-      createPostButton.addEventListener("click", () => {
-        postFormContainer.style.display = "block";
-      });
-    </script>
+    <script type="module" src="/scripts/js/sendnews.js"></script>
   </body>
 </html>
