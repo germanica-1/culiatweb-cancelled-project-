@@ -5,7 +5,7 @@
 }
 
 body {
-    height: auto;
+    height: 100%;
 }
 
 header {
@@ -167,7 +167,7 @@ nav ul li a:hover {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -178,8 +178,8 @@ nav ul li a:hover {
     overflow: hidden;
     transition: transform 0.3s ease;
     flex: 1;
-    min-width: 280px;
-    max-width: 300px;
+    min-width: 20%;
+    max-width: 67%;
 }
 
 .post img {
@@ -207,7 +207,7 @@ nav ul li a:hover {
 
 .post-button {
     display: inline-block;
-    background-color: #0074d9;
+    background-color: #265433;
     color: white;
     padding: 10px 20px;
     font-size: 1rem;
@@ -217,7 +217,7 @@ nav ul li a:hover {
 }
 
 .post-button:hover {
-    background-color: #005bb5;
+    background-color: #2E7D32;
 }
 
 .post:hover {
@@ -332,17 +332,15 @@ footer {
     color: white;
     bottom: 0;
     width: 100%;
-    position: sticky;
-    height: 100px;
+    position: relative;
+    height: 100%;
     top: calc( 100vh - 100px );
     text-align: center;
-    height: 90%;
 }
 
 .footer-container {
     display: flex;
     justify-content: center;
-    
     align-items: center;
     flex-direction: column;
 }
@@ -507,11 +505,15 @@ footer {
 }
 
 @media (max-width: 425px) {
+    .banner {
+        height: 350px;
+    }
+
     .banner-text {
-        margin: auto;
-        margin-top: 150px;
-        margin-bottom: 150px;
-        padding: auto;
+        margin: 50px 0px 50px 0px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 0px;
     }
 
     .banner-text h1 {
@@ -520,6 +522,7 @@ footer {
     }
 
     .banner-text p {
+        font-size: 20px;
         text-align: center;
     }
 }
@@ -641,6 +644,7 @@ footer {
     }
 }
 
+/*copy start from here*/
 /*Adaptive Footers*/
 @media (max-width: 425px) {
     .footer-container {
@@ -662,22 +666,29 @@ footer {
 
     .upper-footer-contents img {
         height: 75px;
-        margin-right: 5px;
-        margin-left: 20px;
+        margin-right: 0px;
+        margin-left: 30px;
     }
     
     .upper-footer-contents h1 {
         font-size: 37px;
     }
 
-    .footer-bottom-contents p {
+    .footer-bottom-contents > p {
         font-size: 13px;
     }
 }
 
-@media (max-height: 1212px) {
+@media (min-height: 1212px) {
     .footer-bottom-contents p {
         font-size: 20px;
+    }
+}
+/* copy up to here */
+
+@media (max-width: 320) {
+    .upper-footer-contents img {
+        margin-left: 0px;
     }
 }
 

@@ -87,16 +87,15 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-
 footer {
     background-color: #2E7D32;
     color: white;
-    position: relative;
     bottom: 0;
     width: 100%;
+    position: relative;
+    height: 100%;
+    top: calc( 100vh - 100px );
     text-align: center;
-    margin-top: 70em;
-
 }
 
 .footer-container {
@@ -360,11 +359,13 @@ footer {
     }
 }
 
+/*copy start from here*/
 /*Adaptive Footers*/
 @media (max-width: 425px) {
     .footer-container {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
     }
 
     .footer-contents ul li a {
@@ -380,26 +381,34 @@ footer {
 
     .upper-footer-contents img {
         height: 75px;
-        margin-right: 10px;
-        margin-left: 15px;
+        margin-right: 0px;
+        margin-left: 30px;
     }
     
     .upper-footer-contents h1 {
         font-size: 37px;
     }
 
+    .footer-bottom-contents > p {
+        font-size: 13px;
+    }
+}
+
+@media (min-height: 1212px) {
     .footer-bottom-contents p {
-        font-size: 13px
+        font-size: 20px;
+    }
+}
+/* copy up to here */
+
+@media (max-width: 320) {
+    .upper-footer-contents img {
+        margin-left: 0px;
     }
 }
 
 /*Weird fix for Big Screen*/
 @media (min-height: 1774px) {
-    footer {
-        margin-top: 0;
-        bottom: -38vh;
-    }
-
     .logo img {
         height: 110px;
     }
