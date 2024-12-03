@@ -2,13 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
-body {
-    background-color: #f0f0f0;
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
 
 header {
     top: 0;
@@ -92,16 +94,16 @@ nav ul li a:hover {
     background-color: #f0f0f0;
     padding: 50px 0;
     text-align: center;
+    flex: 1;
 }
 
 .services-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 50px;
-    max-width: 1200px;
+    gap: 20px;
+    max-width: 100vh;
     margin: 0 auto;
-    margin-top: 60px;
 }
 
 .service-box {
@@ -111,11 +113,13 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 25px;
     flex: 1;
-    min-width: 250px;
-    max-width: 280px;
-    height: 300px; 
+    min-width: 20vh;
+    max-width: 40vh;
+    min-height: 25vh;
+    max-height: 50vh;
     transition: transform 0.3s ease;
 }
+
 .service-content {
     text-align: center;
 }
@@ -146,7 +150,7 @@ nav ul li a:hover {
 
 
 .service-box:hover {
-    transform: scale(1.50) translateZ(0); /* Add translateZ to prevent shifting */
+    transform: scale(1.10) translateZ(0); /* Add translateZ to prevent shifting */
     height: 310px;
     background-color: #f5f5f5; /* Example hover background color */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -166,19 +170,16 @@ nav ul li a:hover {
 footer {
     background-color: #2E7D32;
     color: white;
-    bottom: 0;
     width: 100%;
-    position: relative;
-    height: 100%;
-    top: calc( 100vh - 100px );
     text-align: center;
+    margin-top: auto;  /* Pushes the footer to the bottom */
 }
 
+/* Optional: Additional styling for responsiveness */
 .footer-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .footer-contents ul {
@@ -293,6 +294,7 @@ footer {
     margin-left: -10px;
     margin-top: 35px;
     margin-bottom: 10px;
+
 }
 
 .upper-footer-contents h1 {
@@ -306,39 +308,6 @@ footer {
     justify-content: center;
     margin-bottom: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-/*Adaptive Footers*/
-@media (max-width: 425px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-contents ul li a {
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .footer-middle-contents ul li:not(:last-child)::after,
-    .footer-middle-contents ul li a {
-        display: none;
-        margin: none;
-    }
-
-    .upper-footer-contents img {
-        height: 75px;
-        margin-right: 10px;
-        margin-left: 15px;
-    }
-    
-    .upper-footer-contents h1 {
-        font-size: 37px;
-    }
-
-    .footer-bottom-contents p {
-        font-size: 13px
-    }
 }
 
 /*Weird fix for Big Screen*/

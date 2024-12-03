@@ -5,8 +5,12 @@
     
 }
 
-body {
-    background-color: #f0f0f0;
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -93,6 +97,149 @@ nav ul li a:hover {
     padding: 45px 0;
     text-align: center;
     color: #2E7D32; 
+}
+
+footer {
+    background-color: #2E7D32;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;  /* Pushes the footer to the bottom */
+}
+
+/* Optional: Additional styling for responsiveness */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-contents ul {
+    margin: 20px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.footer-contents ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.footer-contents ul li a {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 50px;
+    margin-left: 70px;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+}
+
+.footer-contents ul li a:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.footer-contents ul li a .fab, 
+.footer-contents ul li a .fas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(60px - 12px);
+    font-size: 24px;
+    color: #262626;
+    transition: 0.5s;
+}
+
+.footer-contents ul li:nth-child(1) a:hover .fab {
+    color: #3b5998; /* Facebook */
+}
+
+.footer-contents ul li:nth-child(2) a:hover .fab {
+    color: #00aced; /* Twitter */
+}
+
+.footer-contents ul li:nth-child(3) a:hover .fas {
+    color: #ea4335; /* Email (Red) */
+}
+
+.footer-contents ul li:nth-child(4) a:hover .fab {
+    color: #e4405f; /* Instagram (Pink) */
+}
+
+.footer-middle-contents ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; 
+    padding: 0;
+    margin: 0;
+}
+
+.footer-middle-contents ul li {
+    position: relative;
+}
+
+.footer-middle-contents ul li:not(:last-child)::after {
+    content: "|"; /* Separator */
+    font-size: 20px;
+    margin-left: 15px; 
+    color: white;
+}
+
+.footer-middle-contents ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 0; 
+}
+
+.footer-middle-contents ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom-container {
+    background-color: #1B5E20; 
+    width: 100%; 
+    height: 50px;
+    text-align: center; 
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.footer-bottom-contents{
+    margin-top: 15px;
+}
+
+.upper-footer-contents img {
+    height: 150px;
+    margin-right: 30px;
+    margin-left: -10px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+
+}
+
+.upper-footer-contents h1 {
+    margin-top: 30px;
+    font-size: 60px;
+}
+
+.upper-footer-contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*Under is all the CSS for Hamburger*/

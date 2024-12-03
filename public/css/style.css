@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100%;
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -26,8 +30,6 @@ header.scrolled {
     background-color: #1B5E20; /* Color after scroll */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
-
 
 .logo {
     display: flex;
@@ -166,6 +168,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex: 1 0 auto;
     gap: 20px;
     max-width: 80%;
     margin: 0 auto;
@@ -178,13 +181,16 @@ nav ul li a:hover {
     overflow: hidden;
     transition: transform 0.3s ease;
     flex: 1;
+    min-height: 20%;
+    max-height: 50%;
     min-width: 20%;
     max-width: 67%;
 }
 
 .post img {
     width: 100%;
-    height: 180px;
+    min-height: 10vh;
+    max-height: 30vh;
     object-fit: cover;
 }
 
@@ -194,13 +200,13 @@ nav ul li a:hover {
 }
 
 .post h3 {
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     color: #2E7D32;
     margin-bottom: 10px;
 }
 
 .post p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #333;
     margin-bottom: 20px;
 }
@@ -209,10 +215,11 @@ nav ul li a:hover {
     display: inline-block;
     background-color: #265433;
     color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 15px 25px;
+    font-size: 1.5rem;
     text-decoration: none;
     border-radius: 5px;
+    vertical-align: bottom;
     transition: background-color 0.3s ease;
 }
 
@@ -221,28 +228,38 @@ nav ul li a:hover {
 }
 
 .post:hover {
-        transform: scale(1.15) translateZ(0); /* Add translateZ to prevent shifting */
-        height: 550px;
+        transform: scale(1.05) translateZ(0); /* Add translateZ to prevent shifting */
+        min-height: 21%;
+        max-height: 51%;
         background-color: #f5f5f5; /* Example hover background color */
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
 }
 
-@media (max-width: 768px) {
-    .posts-container {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 1080px) {
+        .post h3 {
+            font-size: 1.5rem;
+        }
+        
+        .post p {
+            font-size: 1rem;
+        }
+        
+        .post-button {
+            font-size: 0.5rem;
+        }
     }
-
-    .post {
-        max-width: 90%;
-    }
+    @media (max-width: 425) {
+        .posts-container {
+            flex-direction: column;
+            align-items: center;
+        }
 }
 
 /* Services Section */
 .services-section {
+    flex: 1;
     background-color: #f0f0f0;
-    height: 30;
     padding: 50px 0;
     text-align: center;
 }
@@ -252,7 +269,7 @@ nav ul li a:hover {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 1200px;
+    max-width: 100vh;
     margin: 0 auto;
 }
 
@@ -263,9 +280,10 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 25px;
     flex: 1;
-    min-width: 250px;
-    max-width: 280px;
-    height: 275px;
+    min-width: 20vh;
+    max-width: 40vh;
+    min-height: 25vh;
+    max-height: 50vh;
     transition: transform 0.3s ease;
 }
 
@@ -275,7 +293,7 @@ nav ul li a:hover {
 }
 
 .service-box:hover .service-content {
-    transform: scale(1.15); 
+    transform: scale(1.05); 
 }
 
 .service-content img {
@@ -304,22 +322,10 @@ nav ul li a:hover {
 
 
 .service-box:hover {
-    transform: scale(1.25) translateZ(0); /* Add translateZ to prevent shifting */
+    transform: scale(1.15) translateZ(0); /* Add translateZ to prevent shifting */
     height: 310px;
     background-color: #f5f5f5; /* Example hover background color */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-@media (max-width: 768px) {
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-box {
-        max-width: 90%;
-    }
 }
 
 .service-content a {
@@ -330,19 +336,16 @@ nav ul li a:hover {
 footer {
     background-color: #2E7D32;
     color: white;
-    bottom: 0;
     width: 100%;
-    position: relative;
-    height: 100%;
-    top: calc( 100vh - 100px );
     text-align: center;
+    margin-top: auto;  /* Pushes the footer to the bottom */
 }
 
+/* Optional: Additional styling for responsiveness */
 .footer-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .footer-contents ul {
@@ -710,4 +713,95 @@ footer {
         font-size: 40px;
     }
 }
+
+/* Featured Posts Section */
+.posts-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.post {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    flex: 1;
+    min-width: 20%;
+    max-width: 67%;
+    height: auto; /* Default height will auto adjust */
+}
+
+@media (max-width: 1024px) {
+    .posts-container {
+        justify-content: center;
+        height: auto; /* Auto-adjust height for medium screens */
+    }
+
+    .post {
+        flex: 1;
+        min-width: 40%;
+        max-width: 45%;
+        height: auto; /* Adjust height for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .posts-container {
+        justify-content: center;
+        height: auto; /* Auto-adjust height for smaller screens */
+    }
+
+    .post {
+        flex: 1;
+        min-width: 45%;
+        max-width: 50%;
+        height: auto; /* Smaller height for smaller screens */
+    }
+}
+
+@media (max-width: 425px) {
+    .posts-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* Auto-adjust height for mobile screens */
+    }
+
+    .post {
+        min-width: 80%;
+        max-width: 100%;
+        height: 180px; /* Shorter height for mobile screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .services-container {
+        height: auto; /* Auto-adjust height for medium screens */
+    }
+
+    .service-box {
+        min-width: 45%;
+        max-width: 48%;
+        height: 250px; /* Adjust height for medium screens */
+    }
+}
+
+@media (max-width: 425px) {
+    .services-container {
+        justify-content: center;
+        flex-direction: column;
+        height: auto; /* Auto-adjust height for mobile screens */
+    }
+
+    .service-box {
+        min-width: 90%;
+        max-width: 90%;
+        height: 200px; /* Adjust height for mobile screens */
+    }
+}
+
 

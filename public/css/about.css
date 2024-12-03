@@ -263,19 +263,16 @@ video{
   footer {
     background-color: #2E7D32;
     color: white;
-    bottom: 0;
     width: 100%;
-    position: relative;
-    height: 100%;
-    top: calc( 50vh - 100px );
     text-align: center;
+    margin-top: auto;  /* Pushes the footer to the bottom */
 }
 
+/* Optional: Additional styling for responsiveness */
 .footer-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .footer-contents ul {
@@ -405,8 +402,6 @@ video{
     margin-bottom: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
 
 @media (max-width: 1440px) {
     .container {
