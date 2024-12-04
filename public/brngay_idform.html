@@ -1,121 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barangay ID form</title>
-    <link rel="stylesheet" href="css/brngy-id.css">
-    <link rel="icon" type="img/jpg" href="images/file.png">  
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="css/brngy-id.css" />
+    <link rel="icon" type="img/jpg" href="images/file.png" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <img src="images/file.png" alt="Barangay Culiat Logo">
-            <div class="text-container">
-                <span class="title">Barangay Culiat</span>
-                <span class="subtitle">Kalidad sa Serbisyo</span>
-            </div>
+      <div class="logo">
+        <img src="images/file.png" alt="Barangay Culiat Logo" />
+        <div class="text-container">
+          <span class="title">Barangay Culiat</span>
+          <span class="subtitle">Kalidad sa Serbisyo</span>
         </div>
+      </div>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contacts</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
 
-        <!--below are all the HTML for Hamburger-->
-        <div class="off-screen-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contacts</a></li>
-            </ul>
-        </div>
+      <!--below are all the HTML for Hamburger-->
+      <div class="off-screen-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+      </div>
 
-            <div class="ham-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div> 
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-            <script src="scripts/js/hamburger.js"></script>
-        <!--Stops here-->
+      <script src="scripts/js/hamburger.js"></script>
+      <!--Stops here-->
     </header>
-    <h1 id="brngy_id_header">BARANGAY ID FORM</h1>
-    <div class="brngy_id_container"> 
-        <div class="form_container">
-            <form class="form_inputs">
-                <h2 class="text">Full Name</h2>
-                <input class="input" type="text" name="fullName" placeholder="Full Name">
-                <h2 class="text">Phone Number</h2>
-                <input class="input" type="tel" pattern="[0-9]{4} [0-9]{3} [0-9]{4}" placeholder="0912 345 6789" required>
-                <h2 class="text">Email</h2>
-                <input class="input" type="text" name="email" placeholder="example@gmail.com" required>
-                <h2 class="text">Address</h2>
-                <input class="input" type="address" placeholder="467 Tandang Sora Ave, Quezon City, 1128 Metro Manila" required>
-                <h2 class="text">Date of Submission</h2>
-                <input class="input" type="date" placeholder="09/09/2001" required>
-                <div class="submit_btn">
-                <button class="submit" type="submit">Submit</button>
-                </div>
-            </form>
-        </div>
-        <div class="line_space"></div>
-        <div class="line"></div>
-        <div class="line_space2"></div>
-        <div class="requirements">
+    <h1 id="brngy_id_header">BARANGAY SERVICE TEST #1</h1>
+    <div class="brngy_id_container">
+      <div class="form_container">
+        <form id="form_inputs">
+          <h2 class="text">Full Name</h2>
+          <input
+            class="input"
+            id="name"
+            type="text"
+            name="fullName"
+            placeholder="Full Name"
+          />
+          <h2 class="text">Phone Number</h2>
+          <input
+            class="input"
+            id="num"
+            type="tel"
+            pattern="[0-9]{4} [0-9]{3} [0-9]{4}"
+            placeholder="0912 345 6789"
+            required
+          />
+          <h2 class="text">Email</h2>
+          <input
+            class="input"
+            id="email"
+            type="text"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          />
+          <h2 class="text">Address</h2>
+          <input
+            class="input"
+            id="address"
+            type="address"
+            placeholder="467 Tandang Sora Ave, Quezon City, 1128 Metro Manila"
+            required
+          />
+          <h2 class="text">Date of Submission</h2>
+          <input
+            class="input"
+            id="date"
+            type="date"
+            placeholder="09/09/2001"
+            required
+          />
+          <hr />
+          <div class="requirements">
             <h2 id="section_title">REQUIREMENTS</h2>
             <h2 id="text_other">Birth Certificate</h2>
-            <input class="file" type="file" required>
+            <input class="file" type="file" id="data1" required />
             <h2 id="text_other">1 Valid I.D.</h2>
-            <input class="file" type="file" required>
-            <h2 id="text_note">After we have processed the documents we will contact you by your phone number or email</h2>
-        </div>
+            <input class="file" type="file" id="data2" required />
+            <div class="submit_btn">
+              <button class="submit" id="submit" type="submit" value="submit">
+                Submit
+              </button>
+            </div>
+            <h2 id="text_note">
+              After we have processed the documents we will contact you by your
+              phone number or email
+            </h2>
+          </div>
+        </form>
+      </div>
     </div>
     <footer>
-        <div class="footer-container">
-            <div class="upper-footer-container">
-                <div class="upper-footer-contents">
-                    <a href="index.html"> <img src="images/file.png" alt="Barangay Culiat Logo"> </a>
-                    <h1>Barangay Culiat</h1>
-                </div>
-            </div>
-
-            <div class="footer-contents"> 
-            <ul>
-                <li><a href="https://www.facebook.com/profile.php?id=100082364929259 t" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-            </ul>
-            </div>
-
-            <div class="footer-middle-contents">
-                <ul>
-                <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-bottom-container"> 
-                <div class="footer-bottom-contents">
-                    <p>© 2024 - www.brngyculiat.com - All Rights Reserved.</p>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="upper-footer-container">
+          <div class="upper-footer-contents">
+            <a href="index.html">
+              <img src="images/file.png" alt="Barangay Culiat Logo" />
+            </a>
+            <h1>Barangay Culiat</h1>
+          </div>
         </div>
+
+        <div class="footer-contents">
+          <ul>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=100082364929259 t"
+                target="_blank"
+                ><i class="fab fa-facebook" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fab fa-twitter" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fas fa-envelope" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fab fa-instagram" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-middle-contents">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-bottom-container">
+          <div class="footer-bottom-contents">
+            <p>© 2024 - www.brngyculiat.com - All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="scripts/js/nav1.js"></script>
     <script src="scripts/js/hamburger.js"></script>
-</body>
+    <script type="module" src="scripts/js/Inquiries_admin.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-storage.js"></script>
+  </body>
 </html>
