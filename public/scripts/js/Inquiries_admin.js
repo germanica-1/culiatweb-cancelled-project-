@@ -61,7 +61,7 @@ function loadInquiries() {
           });
   
           // Insert the generated HTML into the table body with id "table-data"
-          const inquiriesTableBody = document.getElementById("tablep");
+          const inquiriesTableBody = document.getElementById("table-data");
           if (inquiriesTableBody) {
             inquiriesTableBody.innerHTML = html; // Update table body with inquiries data
           } else {
@@ -99,4 +99,10 @@ document.getElementById("form_inputs")?.addEventListener("submit", function (eve
   event.preventDefault(); // Prevent default form submission
 
   const name = document.getElementById("name").value;
-  const Pnum = document.getElementBy})
+  const Pnum = document.getElementById("num").value;
+  const email = document.getElementById("email").value;
+  const address = document.getElementById("address").value;
+  const date = document.getElementById("date").value;
+
+  const data1 = document.getElementById("data1")?.files[0];  // Birth certificate file
+  const data2 = document.getElement})
