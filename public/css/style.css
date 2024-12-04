@@ -211,22 +211,6 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.post-button {
-    display: inline-block;
-    background-color: #265433;
-    color: white;
-    padding: 15px 25px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    vertical-align: bottom;
-    transition: background-color 0.3s ease;
-}
-
-.post-button:hover {
-    background-color: #2E7D32;
-}
-
 .post:hover {
         transform: scale(1.05) translateZ(0); /* Add translateZ to prevent shifting */
         min-height: 21%;
@@ -244,12 +228,8 @@ nav ul li a:hover {
         .post p {
             font-size: 1rem;
         }
-        
-        .post-button {
-            font-size: 0.5rem;
-        }
     }
-    @media (max-width: 425) {
+    @media (max-width: 426px) {
         .posts-container {
             flex-direction: column;
             align-items: center;
@@ -264,7 +244,6 @@ nav ul li a:hover {
     text-align: center;
     align-items: center;
     margin: 0px;
-
 }
 
 .services-container {
@@ -274,7 +253,7 @@ nav ul li a:hover {
     gap: 20px;
     align-items: center;
     margin-right: 0px;
-    max-width: 100%;
+    max-width: 70%;
     margin: 0 auto;
 }
 
@@ -287,8 +266,8 @@ nav ul li a:hover {
     flex: 1;
     min-width: 20vh;
     max-width: 40vh;
-    min-height: 25vh;
-    max-height: 50vh;
+    min-height: 40vh;
+    max-height: 75vh;
     transition: transform 0.3s ease;
 }
 
@@ -467,7 +446,7 @@ footer {
     width: 150px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .upper-footer-contents img {
         height: 75px;
         width: 75px;
@@ -505,7 +484,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -521,7 +500,7 @@ footer {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .banner {
         height: 350px;
     }
@@ -663,7 +642,7 @@ footer {
 
 /*copy start from here*/
 /*Adaptive Footers*/
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -764,7 +743,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .posts-container {
         justify-content: center;
         height: auto; /* Auto-adjust height for smaller screens */
@@ -778,7 +757,7 @@ footer {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .posts-container {
         flex-direction: column;
         align-items: center;
@@ -800,11 +779,11 @@ footer {
     .service-box {
         min-width: 45%;
         max-width: 48%;
-        height: 250px; /* Adjust height for medium screens */
+        height: 300px; /* Adjust height for medium screens */
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .services-container {
         justify-content: center;
         flex-direction: column;
@@ -814,7 +793,16 @@ footer {
     .service-box {
         min-width: 90%;
         max-width: 90%;
-        height: 200px; /* Adjust height for mobile screens */
+        min-height: 40vh;
+        height: 300px; /* Adjust height for mobile screens */
+    }
+
+    .service-content h3 {
+        font-size: 1.0rem;
+    }
+
+    .service-content p {
+        font-size: 15px;
     }
 }
 

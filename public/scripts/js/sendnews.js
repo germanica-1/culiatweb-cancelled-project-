@@ -61,7 +61,6 @@ postForm.addEventListener("submit", function (event) {
       .then(() => {
         alert("Post has been successfully added!");
         postForm.reset();
-        postFormContainer.style.display = "none";
         
         // Update featured posts after a new post is added
         updateFeaturedPosts();

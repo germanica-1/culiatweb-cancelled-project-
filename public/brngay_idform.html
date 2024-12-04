@@ -57,6 +57,8 @@
                 <input class="input" type="text" name="fullName" placeholder="Full Name">
                 <h2 class="text">Phone Number</h2>
                 <input class="input" type="tel" pattern="[0-9]{4} [0-9]{3} [0-9]{4}" placeholder="0912 345 6789" required>
+                <h2 class="text">Email</h2>
+                <input class="input" type="text" name="email" placeholder="example@gmail.com" required>
                 <h2 class="text">Address</h2>
                 <input class="input" type="address" placeholder="467 Tandang Sora Ave, Quezon City, 1128 Metro Manila" required>
                 <h2 class="text">Date of Submission</h2>
@@ -70,11 +72,12 @@
         <div class="line"></div>
         <div class="line_space2"></div>
         <div class="requirements">
-            <h2>REQUIREMENTS</h2>
-            <ul>
-                <li>Birth Certificate</li>
-                <li>1 Valid I.D.</li>
-            </ul>
+            <h2 id="section_title">REQUIREMENTS</h2>
+            <h2 id="text_other">Birth Certificate</h2>
+            <input class="file" type="file" required>
+            <h2 id="text_other">1 Valid I.D.</h2>
+            <input class="file" type="file" required>
+            <h2 id="text_note">After we have processed the documents we will contact you by your phone number or email</h2>
         </div>
     </div>
     <footer>
